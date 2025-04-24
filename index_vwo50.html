@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疯狂星期四 V我50</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: "微软雅黑", sans-serif;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.8), rgba(228,30,38,0.9));
+      overflow: hidden;
+    }
+    .pulse {
+      position:absolute; width:600px; height:600px;
+      top:50%; left:50%; transform:translate(-50%,-50%);
+      border-radius:50%;
+      background: rgba(255,255,255,0.3);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform:translate(-50%,-50%) scale(0.8); opacity:0.5; }
+      50% { transform:translate(-50%,-50%) scale(1.2); opacity:0.1; }
+      100% { transform:translate(-50%,-50%) scale(0.8); opacity:0.5; }
+    }
+    .wrapper {
+      position:relative;
+      width:100%; max-width:360px;
+      margin:0 auto;
+      padding-top:60px;
+      text-align:center;
+      z-index:1;
+    }
+    .logo {
+      width:100px;
+      animation: swing 1.5s infinite ease-in-out;
+    }
+    @keyframes swing {
+      0%,100% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+    }
+    h1 {
+      margin: 16px 0;
+      color:#FFF; font-size:2.2rem; font-weight:bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .tagline {
+      color:#FFD200; font-size:1.2rem;
+      margin-bottom:24px;
+      animation: flicker 3s infinite;
+    }
+    @keyframes flicker {
+      0%,100% { opacity:1; }
+      50% { opacity:0.6; }
+    }
+    .btn-v50 {
+      display:inline-block;
+      padding:14px 28px;
+      background:#FFD200;
+      color:#E41E26;
+      font-size:1.2rem;
+      font-weight:bold;
+      border:none; border-radius:50px;
+      cursor:pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.1s;
+    }
+    .btn-v50:active {
+      transform: scale(0.95);
+    }
+    .footer {
+      position:absolute; bottom:16px; width:100%;
+      text-align:center; color:#FFF; font-size:0.9rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="pulse"></div>
+  <div class="pulse" style="animation-delay:1s; width:400px; height:400px;"></div>
+
+  <div class="wrapper">
+    <img src="https://imgur.com/2XrIhYZ.png" alt="KFC" class="logo">
+    <h1>疯狂星期四 V我50</h1>
+    <div class="tagline">不V你50，我心慌！</div>
+    <button class="btn-v50" onclick="alert('恭喜你，已获得50元代金券！')">
+      V我50！▶
+    </button>
+  </div>
+
+  <div class="footer">
+    长按二维码，V我50 ⬇ 扫码领取更多福利！
+  </div>
+</body>
+</html>
